@@ -46,6 +46,7 @@ public class Card {
         this.text = text;
         this.manaCost = manaCost;
         this.abilities = abilities;
+        this.isLegendary = false;
     }
     
 
