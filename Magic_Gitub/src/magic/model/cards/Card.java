@@ -25,7 +25,6 @@ public class Card {
         this.manaCost = manaCost;
         this.isLegendary = isLegendary;
         this.abilities = abilities;
-        luder
     }
 
     public Card(String name, String text, String manaCost, Boolean isLegendary) {
