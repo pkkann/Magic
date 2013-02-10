@@ -20,7 +20,7 @@ public class Main {
         // Graphics test
         try {
             AppGameContainer app = new AppGameContainer(new Graphics());
-            app.setDisplayMode(800, 600, false);
+            app.setDisplayMode(1024, 768, false);
             app.start();
         } catch (SlickException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
