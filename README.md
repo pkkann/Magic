@@ -6,13 +6,13 @@ Description
 This game is under development
 We will be back with a description later...
 
- How to install?
- ===============
+How to install?
+===============
 At this point, Magic can not be installed.
 The game is not at all close to playable (we have just started)
 
- Slick2D Netbeans setup (For development)
- ======================
+Slick2D Netbeans setup (For development)
+======================
 1. Right-click project and go to "Properties"
 2. Go to "Libraries"
 3. Click on "Add JAR/Folder
@@ -23,8 +23,8 @@ The game is not at all close to playable (we have just started)
 8. Paste this into the "VM Options" field: -Djava.library.path="PATH_TO_YOUR_NATIVES"
 9. Change the path to the natives
 
- Now, what is the natives, and where do i find them? (For development)
- ===================================================
+Now, what is the natives, and where do i find them? (For development)
+===================================================
 The natives are files that are used to compile the graphics, sound etc.
 There are natives for the following platforms: Windows, Linux, Mac OS X, and Solaris.
 
