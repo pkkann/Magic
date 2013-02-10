@@ -1,8 +1,8 @@
 Magic
 =====
 
- Description
- ===========
+Description
+===========
 This game is under development
 We will be back with a description later...
 
