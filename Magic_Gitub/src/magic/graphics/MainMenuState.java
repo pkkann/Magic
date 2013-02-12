@@ -1,6 +1,7 @@
 
 package magic.graphics;
 
+import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
@@ -11,11 +12,11 @@ import org.newdawn.slick.state.StateBasedGame;
  *
  * @author Patrick
  */
-public class MainMenu extends BasicGameState{
+public class MainMenuState extends BasicGameState{
     
     private int stateID = -1;
     
-    public MainMenu(int stateID) {
+    public MainMenuState(int stateID) {
         this.stateID = stateID;
     }
 
@@ -30,12 +31,13 @@ public class MainMenu extends BasicGameState{
     }
 
     @Override
-    public void render(GameContainer gc, StateBasedGame sbg, Graphics grphcs) throws SlickException {
-        
+    public void render(GameContainer gc, StateBasedGame sbg, Graphics g) throws SlickException {
+        g.setColor(Color.lightGray);
+        g.drawString("Main menu state", 100, 10);
     }
 
     @Override
-    public void update(GameContainer gc, StateBasedGame sbg, int i) throws SlickException {
+    public void update(GameContainer gc, StateBasedGame sbg, int delta) throws SlickException {
         
     }
 
