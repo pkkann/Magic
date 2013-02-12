@@ -19,7 +19,7 @@ public class GraphicsHandler extends StateBasedGame{
 
     @Override
     public void initStatesList(GameContainer gc) throws SlickException {
-        addState(new MainMenu(MAINMENU_stateID));
+        addState(new MainMenuState(MAINMENU_stateID));
     }
 
 }
