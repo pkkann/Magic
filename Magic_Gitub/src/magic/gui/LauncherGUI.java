@@ -66,6 +66,11 @@ public class LauncherGUI extends javax.swing.JFrame {
         setResizable(false);
 
         jButton1.setText("Login");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         user_TF.setText("Username");
         user_TF.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -142,6 +147,11 @@ public class LauncherGUI extends javax.swing.JFrame {
     private void pass_PFFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_pass_PFFocusLost
         pass_PF.setText("Password");
     }//GEN-LAST:event_pass_PFFocusLost
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        this.setVisible(false);
+        gGUI.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 //
 //    /**
 //     * @param args the command line arguments

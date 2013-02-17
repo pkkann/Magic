@@ -6,6 +6,7 @@ package magic.main;
 
 import magic.gui.GameGUI;
 import magic.gui.LauncherGUI;
+import magic.gui.dialogs.Deck_buildDIA;
 
 /**
  *
@@ -13,23 +14,24 @@ import magic.gui.LauncherGUI;
  */
 public class Game {
     
-    private final String gameTitle = "Magic";
-    
     private GameGUI gGUI;
     private LauncherGUI lGUI;
     
+    private Deck_buildDIA d_BDIA;
+    
     
     public Game() {
-        startLauncher(gGUI);
+        startGUI();
     }
     
-    public void startGUI() {
-        gGUI = new GameGUI();
-    }
-    
-    public void startLauncher(GameGUI gameGUI) {
-        lGUI = new LauncherGUI(gameGUI);
-        lGUI.setVisible(true);
+    public void startGUI () {
+        
+        
+        d_BDIA = new Deck_buildDIA(gGUI, true);
+        
+        gGUI = new GameGUI(d_BDIA);
+        
+        lGUI = new LauncherGUI(gGUI);
     }
 
     /**
@@ -37,5 +39,6 @@ public class Game {
      */
     public static void main(String[] args) {
         Game game = new Game();
+        game.lGUI.setVisible(true);
     }
 }
