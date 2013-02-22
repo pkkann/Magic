@@ -1,4 +1,4 @@
-Magic
+Magic news
 =====
 
 Description
