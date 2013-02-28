@@ -8,7 +8,8 @@ We will be back with a description later...
 
 How to install?
 ===============
-dont even try
+dont even try.
+
 to view the cards go to: magicseteditor.sourceforge.net/
 and download the newest version of magic set editor
 
