@@ -4,11 +4,6 @@
  */
 package magic.gui;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.KeyEvent;
-import javax.swing.AbstractAction;
-import javax.swing.KeyStroke;
-
 /**
  *
  * @author Patrick
@@ -16,24 +11,12 @@ import javax.swing.KeyStroke;
 public class LauncherGUI extends javax.swing.JFrame {
 
     private GameGUI gGUI;
-    private ShowCard sc;
     
     public LauncherGUI(GameGUI gGUI) {
         this.gGUI = gGUI;
         setLookAndFeel();
         initComponents();
         setFrame();
-        loginButton.getInputMap(loginButton.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_ENTER, 0), "login");
-        loginButton.getActionMap().put("login", new AbstractAction() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (sc == null) {
-                    sc = new ShowCard();
-                }
-                dispose();
-                sc.setVisible(true);
-            }
-        });
     }
     
     public void setFrame() {
@@ -74,7 +57,7 @@ public class LauncherGUI extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        loginButton = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         user_TF = new javax.swing.JTextField();
         pass_PF = new javax.swing.JPasswordField();
 
@@ -82,10 +65,10 @@ public class LauncherGUI extends javax.swing.JFrame {
         setTitle("Magic launcher");
         setResizable(false);
 
-        loginButton.setText("Login");
-        loginButton.addActionListener(new java.awt.event.ActionListener() {
+        jButton1.setText("Login");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                loginButtonActionPerformed(evt);
+                jButton1ActionPerformed(evt);
             }
         });
 
@@ -120,7 +103,7 @@ public class LauncherGUI extends javax.swing.JFrame {
                     .addComponent(user_TF)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(loginButton)))
+                        .addComponent(jButton1)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -131,7 +114,7 @@ public class LauncherGUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pass_PF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(loginButton)
+                .addComponent(jButton1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -165,10 +148,10 @@ public class LauncherGUI extends javax.swing.JFrame {
         pass_PF.setText("Password");
     }//GEN-LAST:event_pass_PFFocusLost
 
-    private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         this.setVisible(false);
         gGUI.setVisible(true);
-    }//GEN-LAST:event_loginButtonActionPerformed
+    }//GEN-LAST:event_jButton1ActionPerformed
 //
 //    /**
 //     * @param args the command line arguments
@@ -205,8 +188,8 @@ public class LauncherGUI extends javax.swing.JFrame {
 //        });
 //    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JButton loginButton;
     private javax.swing.JPasswordField pass_PF;
     private javax.swing.JTextField user_TF;
     // End of variables declaration//GEN-END:variables

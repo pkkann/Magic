@@ -101,7 +101,7 @@ public class CardGenerator {
         } else if (roll == 1) {
             s = s + "U";
         } else if (roll == 2) {
-            s = s + "W";
+            s = s + "B";
         } else if (roll == 3) {
             s = s + "R";
         } else if (roll == 4) {
@@ -151,7 +151,6 @@ public class CardGenerator {
         r = new Random();
         int roll = r.nextInt(6);
         c.setPower(roll);
-        roll = r.nextInt(6);
         c.setToughness(roll + 1);
         card = (Creature) c;
     }
