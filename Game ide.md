@@ -1,9 +1,13 @@
 Kortspil med map, battle encounter's, gym's ligesom pokemon...
 starting with a tutorial, then quests,
-battle: med kort ligesom mtg cube, med commander(s) possible: change "ff style" with turnbased movement/pokemon style/gangnam style?(just kidding)
-online multiplayer, 1v1, 2v2, ffa(x players), mange mod boss
-online trading for ingame gold, possible to buy gold with real money, perhaps diablo style?
 
+battle: med kort ligesom mtg cube, med commander(s) 
+
+possible: change "ff style" with turnbased movement/pokemon style/gangnam style?(just kidding)
+
+online multiplayer, 1v1, 2v2, ffa(x players), mange mod boss
+
+online trading for ingame gold, possible to buy gold with real money, perhaps diablo style?
 legendary can bruges some commander/pokemon/strategi
 
 Randomization af kort !!!!
