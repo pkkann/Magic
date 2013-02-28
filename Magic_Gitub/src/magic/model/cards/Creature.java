@@ -34,6 +34,10 @@ public class Creature extends Card
         super.setType("Creature");
     }
 
+    public Creature() {
+    }
+    
+
     public String getCreatureType() {
         return creatureType;
     }

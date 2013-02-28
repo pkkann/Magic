@@ -4,17 +4,14 @@
  */
 package magic.model.cards;
 
-import java.util.ArrayList;
-import magic.model.mechanics.Ability;
-
 /**
  *
  * @author Tobias
  */
 public class Land extends Card{
 
-    public Land(String name, String text, Boolean isLegendary, ArrayList<Ability> abilities) {
-        super(name, text, isLegendary, abilities);
+    public Land(String name, String text, Boolean isLegendary) {
+        super(name, text, isLegendary);
         super.setType("Land");
     }
     

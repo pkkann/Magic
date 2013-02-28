@@ -18,6 +18,7 @@ public class Card {
     private String type;
     private Boolean isLegendary;
     private ArrayList<Ability> abilities;
+    private String rarity;
 
     public Card(String name, String text, String manaCost, Boolean isLegendary, ArrayList<Ability> abilities) {
         this.name = name;
@@ -32,25 +33,26 @@ public class Card {
         this.text = text;
         this.manaCost = manaCost;
         this.isLegendary = isLegendary;
+        abilities = new ArrayList<>();
     }
 
-    public Card(String name, String text, Boolean isLegendary, ArrayList<Ability> abilities) {
+    public Card(String name, String text, Boolean isLegendary) {
         this.name = name;
         this.text = text;
         this.isLegendary = isLegendary;
-        this.abilities = abilities;
+        abilities = new ArrayList<>();
     }
 
-    public Card(String name, String text, String manaCost, ArrayList<Ability> abilities) {
+    public Card(String name, String text, String manaCost) {
         this.name = name;
         this.text = text;
         this.manaCost = manaCost;
-        this.abilities = abilities;
-        this.isLegendary = false;
+        abilities = new ArrayList<>();
     }
     
 
     public Card() {
+        abilities = new ArrayList<>();
     }
     
 
@@ -100,6 +102,14 @@ public class Card {
 
     public void setIsLegendary(Boolean isLegendary) {
         this.isLegendary = isLegendary;
+    }
+
+    public String getRarity() {
+        return rarity;
+    }
+
+    public void setRarity(String rarity) {
+        this.rarity = rarity;
     }
     
     
