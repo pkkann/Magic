@@ -10,8 +10,6 @@ How to install?
 ===============
 At this point, Magic can not be installed.
 The game is not at all close to playable (we have just started)
-to view the cards go to: magicseteditor.sourceforge.net/
-and download the newest version of magic set editor
 
 Slick2D has been removed
 ========================
