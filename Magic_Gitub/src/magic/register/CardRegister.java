@@ -30,4 +30,9 @@ public class CardRegister {
         }
         return as;
     }
+    public void showTypes(){
+        for (Card c : al){
+            System.out.println(c.getType());
+        }
+    }
 }

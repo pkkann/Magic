@@ -42,7 +42,7 @@ public class CardGenerator {
         r = new Random();
         int roll = r.nextInt(100);
         // 50
-        if (roll < 100) {
+        if (roll < 50) {
             makeCreature();
         } else if (roll < 65) {
             card.setType("Instant");
@@ -56,7 +56,7 @@ public class CardGenerator {
         } else if (roll < 95) {
             card.setType("Enchantment");
             makeEnchantment();
-        } else if (roll == 100) {
+        } else if (roll < 100) {
             card.setType("Land");
             makeLand();
         }
@@ -68,7 +68,7 @@ public class CardGenerator {
         creature.setCreatureType(randomCreatureType());
         creature.setRarity(randomRarity());
         card = (Creature) creature;
-        card.setType("Creature");
+//        card.setType("Creature");
         card.setName(randomName());
         card.setManaCost(randomCMC());
         card.getAbilities().add(new Ability(randomAbility()));
@@ -77,18 +77,52 @@ public class CardGenerator {
     }
 
     private void makeInstant() {
+        card.setType("Instant");
+        card.setManaCost(randomCMC());
+        card.setRarity(randomRarity());
+        card.setName(randomName() + "'s spell");
+        card.getAbilities().add(new Ability(randomEOTAffect()));
+        card.setText(randomEOTAffect());
+        card.setIsLegendary(false);
     }
 
     private void makeSorcery() {
+        card.setType("Sorcery");
+        card.setManaCost(randomCMC());
+        card.setRarity(randomRarity());
+        card.setName(randomName() + "'s spell");
+        card.getAbilities().add(new Ability(randomEOTAffect()));
+        card.setText(randomEOTAffect());
+        card.setIsLegendary(false);
     }
 
     private void makeArtifact() {
+        card.setType("Artifact");
+        card.setManaCost(randomCMC());
+        card.setRarity(randomRarity());
+        card.setName(randomName() + "'s artifact");
+        card.getAbilities().add(new Ability(randomEOTAffect()));
+        card.setText("T: " +randomEOTAffect());
+        randomLegendarity();
     }
 
     private void makeEnchantment() {
+        card.setType("Enchantment");
+        card.setManaCost(randomCMC());
+        card.setRarity(randomRarity());
+        card.setName(randomName() + "'s enchantment");
+        card.getAbilities().add(new Ability(randomEOTAffect()));
+        card.setText("T: " +randomEOTAffect());
+        randomLegendarity();
     }
 
     private void makeLand() {
+        card.setType("Land");
+        card.setRarity(randomRarity());
+        card.setName(randomName() + "'s land");
+        card.getAbilities().add(new Ability(randomEOTAffect()));
+        card.setText("T: " +randomEOTAffect());
+        randomLegendarity();
     }
 
     private String randomCMC() {
@@ -144,7 +178,7 @@ public class CardGenerator {
     }
 
     private String randomEOTAffect() {
-        return "Target creature gains Trample until end of turn";
+        return "Target creature gains \n Trample until end of turn";
     }
 
     private void setPowerAndToughness(Creature c) {

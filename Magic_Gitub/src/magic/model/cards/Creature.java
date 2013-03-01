@@ -35,6 +35,8 @@ public class Creature extends Card
     }
 
     public Creature() {
+        super();
+        super.setType("Creature");
     }
     
 

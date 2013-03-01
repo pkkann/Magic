@@ -13,6 +13,13 @@ public class Sorcery extends Card{
     public Sorcery(String name, String text, String manaCost) {
         super(name, text, manaCost);
         super.setType("Sorcery");
+        super.setIsLegendary(false);
+    }
+
+    public Sorcery() {
+        super();
+        super.setType("Sorcery");
+        super.setIsLegendary(false);
     }
     
 }

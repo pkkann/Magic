@@ -36,7 +36,7 @@ public class ShowCard extends javax.swing.JFrame {
         }
         updateList(cr.getNames(), listOfCards);
         listOfCards.setSelectedIndex(0);
-
+        cr.showTypes();
     }
 
     private void updateList(ArrayList<String> al, JList jl) {
@@ -48,6 +48,8 @@ public class ShowCard extends javax.swing.JFrame {
     }
 
     private void setColor(Card c) {
+        if (!c.getType().contains("Land")){
+
         if (c.getManaCost().contains("R")) {
             cardPanel.setBackground(Color.RED);
         } else if (c.getManaCost().contains("U")) {
@@ -61,20 +63,49 @@ public class ShowCard extends javax.swing.JFrame {
         } else {
             cardPanel.setBackground(Color.LIGHT_GRAY);
         }
+        } else{
+            cardPanel.setBackground(Color.GRAY);
+        }
     }
 
     private void setCard(Card c) {
-        Creature creature = (Creature) c;
-        c = (Creature) creature;
-        nameLabel.setText(c.getName());
-        cmcLabel.setText(c.getManaCost());
-        abilityLabel.setText(c.getText());
-        rarityLabel.setText(c.getRarity());
-        ptLabel.setText(creature.getPower() + " / " + creature.getToughness());
-        if (creature.getIsLegendary() == false) {
-            typeLabel.setText(creature.getType() + " - " + creature.getCreatureType());
+        if (c.getType().contains("Creature")) {
+            System.out.println("this is Creature");
+            Creature creature = (Creature) c;
+            c = (Creature) creature;
+            nameLabel.setText(c.getName());
+            cmcLabel.setText(c.getManaCost());
+            abilityLabel.setText(c.getText());
+            rarityLabel.setText(c.getRarity());
+            ptLabel.setText(creature.getPower() + " / " + creature.getToughness());
+            if (creature.getIsLegendary() == false) {
+                typeLabel.setText(creature.getType() + " - " + creature.getCreatureType());
+            } else {
+                typeLabel.setText("Legendary " + creature.getType() + " - " + creature.getCreatureType());
+            }
+        } else if (!c.getType().contains("Land")) {
+            System.out.println("Not Land");
+            nameLabel.setText(c.getName());
+            cmcLabel.setText(c.getManaCost());
+            abilityLabel.setText(c.getText());
+            rarityLabel.setText(c.getRarity());
+            ptLabel.setText("");
+            if (c.getIsLegendary() == false) {
+                typeLabel.setText(c.getType());
+            } else {
+                typeLabel.setText("Legendary " + c.getType());
+            }
         } else {
-            typeLabel.setText("Legendary " + creature.getType() + " - " + creature.getCreatureType());
+            System.out.println("this is land");
+            ptLabel.setText("");
+            nameLabel.setText(c.getName());
+            abilityLabel.setText(c.getText());
+            rarityLabel.setText(c.getRarity());
+            if (c.getIsLegendary() == false) {
+                typeLabel.setText(c.getType());
+            } else {
+                typeLabel.setText("Legendary " + c.getType());
+            }
         }
     }
 

@@ -13,6 +13,14 @@ public class Instant extends Card{
     public Instant(String name, String text, String manaCost) {
         super(name, text, manaCost);
         super.setType("Instant");
+        super.setIsLegendary(false);
     }
+
+    public Instant() {
+        super();
+        super.setType("Instant");
+        super.setIsLegendary(false);
+    }
+    
     
 }
